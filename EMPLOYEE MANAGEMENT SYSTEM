@@ -1,14 +1,14 @@
 #Employee management system
 #Designer :- Reddy Rohith
-print("----------EMPLOYEE MANAGEMENT SYSTEM------------")
-print("1.INSERT EMPLOYEE RECORD")
-print("2.DISPLAY ALL EMPLOYEE RECORDS")
-print("3.SEARCH EMPLOYEE RECORD")
-print("4.UPDATE EMPLOYEE RECORD")
-print("5.DELETE EMPLOYEE RECORD")
-print("6.EXIT")
 employee_details = dict()
 while True:
+    print("----------EMPLOYEE MANAGEMENT SYSTEM------------")
+    print("1.INSERT EMPLOYEE RECORD")
+    print("2.DISPLAY ALL EMPLOYEE RECORDS")
+    print("3.SEARCH EMPLOYEE RECORD")
+    print("4.UPDATE EMPLOYEE RECORD")
+    print("5.DELETE EMPLOYEE RECORD")
+    print("6.EXIT")
     choice=int(input("Enter your choice:"))
     if choice==1:
         print("-----------INSERT EMPLOYEE RECORD-----------")
@@ -17,25 +17,30 @@ while True:
         empdept=input("Enter employee department:")
         empsal=float(input("Enter employee salary:"))
         employee_details.update({empid:{"emp_name":empname,"emp_dept":empdept,"emp_sal":empsal}})
-    if choice==2:
+    elif choice==2:
         print("-----------DISPLAY ALL EMPLOYEE RECORDS-----------")
         for i in employee_details.items():
             print("%20s %20s %20s %20f"%(i[0],i[1]["emp_name"],i[1]["emp_dept"],i[1]["emp_sal"]))
-    if choice==3:
+    elif choice==3:
         print("-----------SEARCH EMPLOYEE RECORD-----------")
         empid=(input("Enter employee id:"))
         print(employee_details.get(empid))
-    if choice==4:
+    elif choice==4:
         print("-----------UPDATE EMPLOYEE RECORD-----------")
         empid=(input("Enter employee id:"))
         empname=input("Enter employee name:")
         empdept=input("Enter employee department:")
         empsal=int(input("Enter employee salary:"))
         employee_details.update({empid:{"emp_name":empname,"emp_dept":empdept,"emp_sal":empsal}})
-    if choice==5:
+    elif choice==5:
         print("-----------DELETE EMPLOYEE RECORD-----------")
         empid=(input("Enter employee id:"))
         employee_details.pop(empid)
-    if choice==6:
+    elif choice==6:
         print("-----------EXIT-----------")
         break
+    else:
+        print("Invalid choice!!!!!")
+
+
+        
