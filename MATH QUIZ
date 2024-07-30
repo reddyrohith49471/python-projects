@@ -1,0 +1,54 @@
+#MATH QUIZ
+#Designer :- REDDY ROHITH
+import random as r
+print("********************************")
+print("*******A SIMPLE MATH QUIZ*******")
+print("********************************")
+print("1.ADDITION")
+print("2.SUBTRACTION")
+print("3.MULTIPLICATION")
+print("4.INTEGER DIVISON")
+print("5.EXIT")
+print("---------------------------------")
+while True:
+    choice = int(input("Enter your choice:-"))
+    a = r.randrange(1,100)
+    b = r.randrange(1,100)
+    if(choice == 1):
+        print(a,"+",b,"=")
+        ans = int(input("Enter Your answer:-"))
+        if(a+b == ans):
+            print("Your answer is correct")
+        else:
+            print("Your answer is incorrect")
+    elif(choice == 2):
+         print(a,"-",b,"=")
+         ans = int(input("Enter Your answer:-"))
+         if(a-b == ans):
+            print("Your answer is correct")
+         else:
+            print("Your answer is incorrect")
+    elif(choice == 3):
+         print(a,"*",b,"=")
+         ans = int(input("Enter Your answer:-"))
+         if(a*b == ans):
+            print("Your answer is correct")
+         else:
+            print("Your answer is incorrect")
+    elif(choice == 4):
+         print(a,"//",b,"=")
+         ans = int(input("Enter Your answer:-"))
+         if(a//b == ans):
+            print("Your answer is correct")
+         else:
+            print("Your answer is incorrect")
+    elif(choice == 5):
+         break
+    else:
+        print("INVALID CHOICE")
+
+print("THANK YOU FOR PLAYING")
+
+
+
+    
